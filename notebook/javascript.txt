@@ -1,0 +1,469 @@
+(?<=arr\.)(.*?)(?=\()
+@@  JavaScript对象   
+01  Array对象
+02  方法
+04  一、获取新的数组，不改变原始数组：
+3   (1) newarr = arr.**concat**(arr1, arr2, ..., arrN)  
+        按顺序连接所有数组元素，并保存为新数组。  
+3   (2) newarr = arr.**slice**(start, end)  
+        截取原数组中从start索引开始到end索引之前的元素保存为新数组。  
+3   (3) newArr = Array.**from**(obj [,mapFunction [,thisValue]])  
+04  二、改变原始数组
+3   (1) arr.**shift**()  
+        删除数组的第一个元素。  
+3   (2) arr.**unshift**(val1, val2, ..., valN)  
+        在原始数组的开头添加新的元素。  
+3   (3) arr.**pop**()  
+        删除数组的最后一个元素。  
+3   (4) arr.**push**(val1, val2, ..., valN)  
+        在原始数组的最后添加新的元素。  
+3   (5) arr.**splice**(index, number of deletions, val1, val2, ..., valN)  
+        从index索引指定的元素处删除指定个数的元素并插入新的元素，删除个数和新元素可选。  
+3   (6) arr.**fill**(value, start, end)  
+        把指定长度的元素替换为value。  
+3   (7) arr.**copyWithin**(target, start, end)  
+        截取原数组中从start索引开始到end索引之前的元素，并从target索引指定的元素开始，按顺序把之后的元素替换掉。  
+3   (8) arr.**reverse**()  
+        反转数组的元素顺序。  
+3   (9) arr.**sort**([sortfunction])  
+        arr.sort()：数组元素按字母升序排列。  
+        arr.sort(function(a,b){return a-b})：数组元素按数字大小升序排列。   
+04  三、检查数组元素：
+3   (1) newBool = arr.**includes**(searchElement, [fromIndex])  
+        (从fromIndex处开始)判断数组arr是否拥有元素searchElement。  
+3   (2) newIndex = arr.**indexOf**(searchElement, [fromIndex])  
+        (从fromIndex处开始)在数组arr中从左到右地查找元素searchElement的索引，不存在则返回-1。  
+3   (3) newIndex = arr.**lastIndexOf**(searchElement, [fromIndex])  
+        (从fromIndex处开始)在数组arr中从右到左地查找元素searchElement的索引，不存在则返回-1。  
+3   (4) newBool = arr.**every**(function(currentValue, [index,[arr]]), [thisValue])  
+3   (5) newBool = arr.**some**(function(currentValue, [index,[arr]]), [thisValue])  
+3   (6) newArr = arr.**filter**(function(currentValue, [index,[arr]]), [thisValue])  
+3   (7) newElement = arr.**find**(function(currentValue, [index,[arr]]), [thisValue])  
+3   (8) newIndex = arr.**findIndex**(function(currentValue, [index,[arr]]), [thisValue])  
+04  四、处理数组元素：
+3   (1) arr.**forEach**(function(currentValue,[index,[arr]]),[thisValue])  
+3   (2) newArr = arr.**map**(function(currentValue,[index,[arr]]),[thisValue])  
+3   (3) result = arr.**reduce**(function(total, currentValue,[index,[arr]]),[thisValue])  
+3   (4) result = arr.**reduceRight**(function(total, currentValue,[index,[arr]]),[thisValue])  
+04  五、其他：
+3   (1) arr.**toString**()  
+        把数组转换成字符串返回。  
+3   (2) arr.**valueOf**()  
+        返回数组对象的原始值。  
+3   (3) newBool = Array.**isArray**(obj)  
+        判断一个对象obj是否是数组  
+3   (4) newStr = arr.**join**(connector)  
+        把数组arr的所有元素(用字符串connector)连接起来，保存为字符串。  
+3   (5) newObj = arr.**entries**()  
+3   (6) newObj = arr.**keys**()  
+01  String对象  
+02  方法  
+04  一、提取字符串  
+3   (1) result = str.**charAt**(index)  
+        返回字符串中索引为Index处的字符。  
+3   (2) result = str.**slice**(start, end)  
+        返回字符串中start开始到end之前的字符。  
+3   (3) result = str.**substr**(start, length)  
+        返回字符串中start开始长度为length的字符。  
+3   (4) result = str.**substring**(index1, index2)  
+        若index1或index2是负数，此方法会把对应的index1或index2设置成0。  
+        substring会比较index1和index2的大小，并把较小值作为start，较大值作为end，  
+        然后返回字符串中start开始到end之前的字符。  
+3   (5) result = str.**charCodeAt**(index)  
+        返回字符串中索引为index处的字符的Unicode编码  
+04  二、处理字符串  
+3   (1) newStr = str.**trim**()  
+        去掉原始字符串开头和结尾的所有空格保存为新的字符串。  
+3   (2) newArr = str.**split**([separator], [limit])  
+        以原始字符串中的separator为界，把字符串分割成多个元素保存到数组中。  
+3   (3) newStr = str.**concat**(str1, str2, ..., strN)  
+        按顺序连接所有字符串并保存为新的字符串。  
+3   (4) newStr = str.**replace**(fromStr, toStr)  
+        把字符串中的fromStr替换成toStr并保存为新的字符串  
+3   (5) newStr = str.**repeat**(timesNumber)  
+        把字符串复制timesNumber次保存为新的字符串  
+3   (6) newStr = str.**toLowerCase**()  
+3       newStr = str.**toUpperCase**()  
+3       newStr = str.**toLocaleLowerCase**()  
+3       newStr = str.**toLocaleUpperCase**()  
+        （根据本地主机的语言环境）对字符串进行大小写转换，保存为新的字符串。  
+3   (7) newStr = String.fromCharCode(code1, code2, ..., codeN)  
+        按顺序把Unicode值转为字符，并把它们拼接起来保存为一个字符串。  
+04  三、查找字符串  
+30  (1) result = str.**indexOf**(searchStr, [index])  
+        在字符串中由index开始从左向右搜索字符串searchStr，找到即返回其索引，不存在则返回-1。  
+30  (2) result = str.**lastIndexOf**(searchStr, [index])  
+        在字符串中由index开始从右向左搜索字符串searchStr，找到即返回其索引，不存在则返回-1。  
+30  (3) result = str.**includes**(searchStr, [index])  
+        在字符串中由index开始从左向右搜索字符串searchStr，返回布尔值。  
+30  (4) result = str.**match**(regexp)  
+        在字符串中匹配正则表达式。  
+30  (5) result = str.**search**(searchVal)  
+        在字符串中查找searchVal（字符串或正则表达式），找到则返回其索引，不存在则返回-1。  
+30  (6) result = str.**startsWith**(searchStr, [start=0])  
+        判断字符串中从start开始到结尾处的字符串是否以searchStr开头，返回布尔值。  
+04  四、其它  
+30  (1) str.**valueOf**()  
+        返回对象的原始值。  
+30  (2) str.**toString**()  
+        返回一个字符串。（返回自己有什么意思？）  
+
+01  Math对象  
+02  属性  
+04  一、数学常量  
+30  (1) **Math.PI**  
+        圆周率：π  
+30  (2) **Math.E**  
+        自然对数的底数：e  
+30  (3) **Math.LN2**  
+        2的自然对数：ln2  
+30  (4) **Math.LN10**  
+        10的自然对数：ln10  
+30  (5) **Math.LOG2E**  
+        2为底e的对数：log<sub>2</sub><sup>e</sup>  
+30  (5) **Math.LOG10E**  
+        10为底e的对数：log<sub>10</sub><sup>e</sup>  
+30  (7) **Math.SQRT1_2**  
+        1/2的算术平方根：√(1/2)  
+30  (8) **Math.SQRT2**  
+        2的算术平方根：√2  
+02  方法  
+04  一、常规计算  
+30  (1) **Math.abs**(x)  
+        返回x的绝对值：|x|  
+30  (2) **Math.random**()  
+        返回0（包含）到1（不包含）之间的随机数。  
+30  (3) **Math.pow**(x, y)  
+        返回x的y次幂：x<sup>y</sup>  
+30  (4) **Math.sqrt**(x)  
+        返回x的算术平方根：√x  
+30  (5) **Math.exp**(x)  
+        返回e的x次幂：e<sup>x</sup>  
+30  (5) **Math.log**(x)  
+        返回x的自然对数：lnx  
+30  (7) **Math.round**(x)  
+        对x进行四舍五入取整。  
+30  (8) **Math.ceil**(x)  
+        对x进行向上取整。  
+30  (9) **Math.floor**(x)  
+        对x进行向下取整。  
+30  (10) **Math.max**(x1, x2, ..., xN)  
+30       **Math.min**(x1, x2, ..., xN)  
+         返回最大值、最小值。  
+04  二、三角函数  
+30  (1)  **Math.sin**(x)  
+        返回x的正弦值。  
+30  (2) **Math.cos**(x)  
+        返回x的余弦值。  
+30  (3) **Math.tan**(x)  
+        返回x的正切值。  
+30  (4) **Math.asin**(x)  
+        返回x的反正弦值。  
+30  (5) **Math.acos**(x)  
+        返回x的反余弦值。  
+30  (5) **Math.atan**(x)  
+        返回x的反正切值。  
+30  (7) **Math.atan2**(y, x)  
+        返回从原点(0,0)到(x,y)点的线段与x轴正方向之间的夹角(弧度值)  
+
+
+@@  Browser对象  
+01  Window对象  
+02  属性  
+04  一、产生新的对象  
+30  (1) window.navigator  
+        返回Navigator对象。  
+30  (2) window.screen  
+        返回Screen对象。  
+30  (3) window.history  
+        返回History对象。  
+30  (4) window.location  
+        返回Location对象。  
+30  (5) window.document  
+        返回Document对象。  
+02  方法  
+04  一、弹出提示框。  
+30  (1) alert(msgStr)  
+        弹出一个带有msgStr和确认按钮的警告框。  
+30  (2) clickResult = confirm(msgStr)  
+        弹出一个带有指定消息和确认及取消按钮的对话框，返回布尔值。  
+30  (3) inputedStr = prompt(msgStr,defaultStr)  
+        弹出一个提示用户进行输入的对话框，返回用户输入的字符串。  
+04  二、延迟调用函数。  
+30  (1) id_of_setTimeout = setTimeout(funcName, [milliseconds], [funcParams])  
+        设置延迟一定的毫秒数后调用执行函数，返回一个ID可供clearTimeout停止执行函数。  
+30  (2) id_of_setInterval = setTimeout(funcName, [milliseconds], [funcParams])  
+        设置每隔一定的毫秒数调用执行函数，返回一个ID可供clearInterval停止执行函数。  
+30  (3) clearTimeout(id_of_setTimeout)  
+30      clearInterval(id_of_setInterval)  
+        停止对执行函数的调用。  
+04  三、产生新的对象。  
+30  (1) newWindow = window.open(URL,name,specs,replace)  
+        新建一个受js脚本窗口控制的窗口，返回一个新的窗口对象。  
+  
+01  Navigator对象  
+04  Navigator对象包含有关浏览器的一些信息：  
+30  (1) navigator.appName  
+        返回浏览器的名称。  
+30  (2) navigator.appCodeName  
+        返回浏览器的代码名。  
+30  (3) navigator.appVersion  
+        返回浏览器的平台和版本信息。  
+30  (4) navigator.userAgent  
+        返回由客户机发送服务器的user-agent头部的值。  
+30  (5) navigator.platform  
+        返回浏览器的操作系统平台。  
+30  (6) navigator.cookieEnabled  
+        判断浏览器是否启用了cookie，返回布尔值。  
+30  (7) navigator.javaEnabled  
+        判断浏览器是否支持并启用了java，返回布尔值。  
+  
+01  Screen对象  
+04  Screen对象包含有关客户端显示屏一些信息：  
+30  (1) screen.width  
+30      screen.height  
+        返回屏幕分辨率。  
+30  (2) screen.availWidth  
+30      screen.availHeight  
+        返回屏幕可用宽高（单位：px）  
+        它不包括分配给半永久特性（如屏幕底部的任务栏）的垂直空间。  
+30  (3) screen.colorDepth  
+        返回目标设备或缓冲器上的调色板的比特深度。  
+30  (4) screen.pixelDepth  
+        返回屏幕的颜色分辨率（每象素的位数）。  
+  
+01  History对象  
+04  History对象记录了当前网页所在的标签页浏览过的所有URL。它就相当于一个当前标签页的历史记录列表。你可以对它进行以下操作：  
+30  (1) history.length  
+        返回History对象记录的URL数量。  
+30  (2) history.back()  
+        加载历史列表中的上一个URL，相当于按下浏览器的后退按钮。  
+30  (3) history.foward()  
+        加载历史列表中的下一个URL，相当于按下浏览器的前进按钮。  
+30  (4) history.go(number|URL)  
+        加载历史列表中的某一个具体URL。  
+        如果参数是数字，那么0代表当前页面，以此类推。  
+  
+01  Location对象  
+
+@@  DOM对象
+01  Document对象  
+04  一、查找html元素  
+    (1) document.getElementById(*id*)  
+        按id查找元素。  
+    (2) document.getElementsByTagName(*tagName*)  
+        按标签名字查找元素。  
+    (3) document.getElementsByClassName(*className*)  
+        按类名查找元素。  
+    (4) document.getElementsByName(*name*)  
+        按name的属性值查找元素。  
+    (5) document.body  
+        返回body元素。  
+    (6) document.activeElement  
+        返回文档中当前获得焦点的元素对象。  
+    (7) document.images  
+        返回包含所有&lt;img>元素对象的数组。  
+    (8) document.forms  
+        返回包含所有&lt;form>元素对象的数组。  
+    (9) document.links  
+        返回包含所有&lt;a href="">和<area>元素对象的数组。  
+    (10) document.anchors  
+         返回包含所有&lt;a name="">(锚点)元素对象的数组。  
+    (11) document.documentElement  
+         返回html元素。  
+    (12) document.embeds  
+         返回包含所有&lt;embed>元素对象的数组。  
+    (13) document.scripts  
+         返回包含所有&lt;script>元素对象的数组。  
+    (14) document.querySelector(*CSS selectors*)  
+         返回文档中匹配指定CSS选择器的第一个元素。  
+    (15) document.querySelectorAll(*CSS selectors*)  
+         返回一个NodeList对象，该对象包含文档中匹配指定CSS选择器的所有元素。  
+04  二、获取文档信息
+    (1) document.doctype  
+        返回文档类型声明。  
+    (2) document.lastModified  
+        返回文档的最后修改时间。  
+    (3) document.title  
+        返回文档的标题。  
+    (4) document.documentMode  
+        此属性是IE浏览器的特定属性，它返回浏览器渲染文档的模式。  
+    (5) document.URL  
+        返回当前文档的URL。  
+    (6) document.documentURI  
+        返回当前文档的URI。  
+    (7) document.domain  
+        返回当前文档的域名。  
+    (8) document.inputEncoding  
+        返回当前文档的编码。  
+    (9) document.referrer  
+        返回载入当前文档的来源文档的URL，如果当前文档不是通过超级链接访问的，则返回值为null。  
+    (10) document.readyState  
+         返回当前文档的载入状态。  
+         文档载入状态有以下几个值：  
+         --uninitialized：还未开始载入。  
+         --loading：正在加载。  
+         --interactive：已加载，文档与用户可交互。  
+         --complete：载入完成。  
+    (11) document.baseURI  
+         返回当前文档的基础URI。  
+    (12) document.hasFous()  
+         判断文档是否获取焦点。  
+04  三、修改文档内容
+    (1) document.cookie  
+        设置或返回当前文档所有 键/值 对的所有 cookies。  
+    (2) document.normalize()  
+        合并相邻的文本节点并删除空的文本节点。  
+    (3) document.write(*html1*,*html2*,...*htmlN*)  
+        document.writeln(*html1*,*html2*,...*htmlN*)  
+        向输出流写入一些html代码。  
+        两者的区别在于document.writeln()会在添加的文本结尾处新增一个空行。
+        (这个空行指的是html源代码里面的空行，换行符和空格在渲染时仍然会被当作一个空格显示。)  
+    (4) document.addEventListener(*event*,*function*,*useCapture*)  
+        document.removeEventListener(*event*,*function*,*useCapture*)  
+        添加或移除针对文档的事件句柄。  
+04  四、不改变文档内容，创建可用的节点。
+
+01  元素对象
+04  一、查找新的元素   
+    (1) element.getElementsByTagName(*tagName*)  
+        按标签名查找子元素。  
+    (2) element.getElementsByClassName(*className*)  
+        按类名查找子元素。  
+    (3) element.children  
+        返回元素的子元素集合。  
+    (4) element.nextElementSibling  
+        返回指定元素的下一个兄弟元素。  
+    (5) element.previousElementSibling  
+        返回指定元素的前一个兄弟元素。  
+    (6) element.querySelector(*CSS selector*)  
+        返回指定元素的匹配指定CSS选择器的第一个子元素。  
+04  二、查找节点  
+    (1) element.childNodes  
+        返回包含指定元素所有子节点的NodeList。  
+    (2) element.firstChild  
+        返回元素的第一个子节点。  
+    (3) element.lastChild  
+        返回元素的最后一个子节点。  
+    (4) element.nextSibling  
+        返回元素之后紧跟的兄弟节点。  
+    (5) element.parentNode  
+        返回元素的父节点。  
+    (6) element.previousSibling  
+        返回元素的前一个兄弟节点。  
+04  三、获取属性节点  
+    (1) element.attributes  
+        返回元素的属性的集合。  
+    (2) element.getAttributeNode(*attributeName*)  
+        返回当前元素中指定的属性节点。  
+    (3) element.removeAttributeNode(*attibuteNode*)  
+    (4) element.setAttributeNode(*attributeNode*)  
+04  四、元素属性
+    (1) element.getAttribute(*attributeName*)  
+        读取元素中指定的属性值。  
+    (2) element.className  
+        设置或返回元素的 class 属性值。  
+    (3) element.contentEditable  
+        element.dir  
+        element.id  
+        element.lang  
+        element.title  
+        element.accesskey  
+        element.tabIndex  
+        设置或返回元素的 contenteditable 属性值。  
+    (4) element.removeAttribute(*attributeName*)  
+        删除元素中指定的属性。  
+    (5) element.setAttribute(*attributeName*,*attributeValue*)  
+        创建或改变元素中指定的属性值。  
+04  五、元素信息  
+    (1) element.tagName  
+        返回元素的标签名。  
+    (2) element.innerHTML  
+        设置或返回元素开始和关闭标签之间的html代码。  
+    (3) element.hasAttribute(*attributeName*)  
+        判断元素是否存在指定的属性。  
+    (4) element.hasAttributes()  
+        判断元素是否带有属性。  
+    (5) element.hasChildNodes()  
+        判断元素是否拥有子元素。  
+    (6) element.isContentEditable  
+        判断元素内容是否可编辑。  
+04  六、节点信息  
+    (1) node.nodeName  
+        根据不同的节点类型返回其名称。  
+        例如元素节点返回其标签名，属性节点返回其属性名  
+    (2) node.nodeType  
+        返回代表节点类型的数字：  
+        --1：元素节点  
+        --2：属性节点  
+        --3：文本节点  
+        --8：注释节点  
+    (3) node.nodeValue  
+        设置或返回节点值。  
+    (4) node1.isEqualNode(node2)  
+        判断两个节点是否相等。  
+    (5) node1.isSameNode(node2)  
+        判断node1和node2是不是同一个节点。  
+    (6) node.isSupported(*feature*,*[version]*)  
+        判断当前节点是否支持(指定版本的)指定特性。  
+    (7) node.textContent  
+        设置或返回节点的文本内容。  
+    (8) node.namespaceURI  
+        返回当前节点命名空间的URI  
+        元素节点继承父节点的命名空间，因此，XHTML文档中的所有元素命名空间URI为
+        "http://www.w3.org/1999/xhtml"。  
+    (9) node.isDefaultNamespace(*namespaceURI*)  
+        查看指定的命名空间是否为默认命名空间。  
+    (10) node1.cpmpareDocumentPosition(*node2*)  
+         按照文档顺序，比较当前节点与指定节点的文档位置。可能的返回值有：  
+         --1：没有关系，这两个节点不属于同一个文档。  
+         --2：node1在node2之后。  
+         --4：node1在node2之前。  
+         --8：node1在node2之内。  
+         --16：node2在node1之内。  
+         --32：没有关系的，或是两个节点在同一元素的两个属性。  
+         ***注意：***返回值可以是值的组合。
+         例如，返回20意味着在node2在node1内部(16)，并且node1在node2之前(4)。  
+04  七、修改节点内容  
+    (1) node.appendChild(*node*)  
+        向节点的子节点列表的末尾添加新的子节点。  
+    (2) node.cloneNode(*[deep]*)  
+        创建指定节点的精确拷贝。  
+        如果设置deep的值为true，它将递归复制当前节点的所有子节点。  
+    (3) node.normalize  
+        合并相邻的文本节点并删除空的文本节点。  
+    (4) node.removeChild(*node*)  
+        从子节点列表中删除一个子节点。  
+    (5) node.replaceChild(*newNode*, *oldNode*)  
+        把node子节点列表中的指定子节点替换成新的子节点。  
+    (6) node.insertBefore(*newNode*,*existingNode*)  
+        在当前节点的指定的子节点之前添加新的节点。  
+04  八、修改元素内容  
+    (1) element.focus  
+        element.blur  
+        为元素设置/移除焦点。  
+    (2) document.addEventListener(*event*,*function*,*useCapture*)  
+        document.removeEventListener(*event*,*function*,*useCapture*)  
+        添加/移除针对当前元素的事件句柄。  
+04  九、其他对象
+    (1) node.ownerDocument  
+        返回当前节点的根元素。在HTML文档中返回的是表示文档本身的Document对象。  
+    (2) element.classList  
+        返回一个DOMTokenList对象，该对象存储了当前元素的类名列表。
+        它拥有以下属性和方法：  
+        --classList.length：  
+            返回列表中类的数量。  
+        --classList.value：  
+            返回元素的class属性值。  
+        --classList.add(*class1*,*class2*,*...*,*classN*)：  
+            在元素中添加指定的类名，如果类名已存在，则不会添加。   
+        --classList.remove(*class1*,*class2*,*...*,*classN*)：  
+            在元素中移除指定的类名，如果类名不存在也不会报错。  
+        --classList.contains(*className*)：  
+            判断列表中是否存在指定类名。  
+        --classList.item(*index*)：  
+            返回列表中index处的类名。  
+        --classList.toggle(*className*,*true|false*)  
+            在元素中切换类名。  
+    (3) element.style  
+        返回CSSStyleDeclaration对象(CSS样式声明对象)。  

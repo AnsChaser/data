@@ -1,0 +1,9 @@
+@@  便签
+01  Eruda的使用
+    关于移动设备的调试  
+    在html中引入并执行以下脚本：  
+    ```
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+    ```
+    刷新后页面就会出现eruda调试工具的悬浮窗。  
