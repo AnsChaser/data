@@ -1,9 +1,17 @@
-@@  便签
-01  Eruda的使用
-    关于移动设备的调试  
+@@  移动端调试工具
+01  Eruda
     在html中引入并执行以下脚本：  
     ```
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
     ```
-    刷新后页面就会出现eruda调试工具的悬浮窗。  
+    刷新页面即可看到eruda悬浮按钮。  
+01  vConsole
+    在html头部引入并执行以下脚本：  
+    ```
+    <script src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
+    <script>
+        var vConsole = new VConsole();
+    </script>
+    ```
+    刷新页面即可看到vConsole悬浮按钮。  
