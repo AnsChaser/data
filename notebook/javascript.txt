@@ -7,7 +7,11 @@
         按顺序连接所有数组元素，并保存为新数组。  
 3   (2) newarr = arr.**slice**(start, end)  
         截取原数组中从start索引开始到end索引之前的元素保存为新数组。  
-3   (3) newArr = Array.**from**(obj [,mapFunction [,thisValue]])  
+3   (3) newArr = Array.**from**(arrayLike, ?mapFunction, ?thisValue)  
+        从一个类数组对象或可迭代对象arrayLike创建一个新的、浅拷贝的数组实例。  
+        可选参数mapFunction:对新数组的每个元素执行此函数，最后把对应的元素替换成return的值。
+        回调函数可定义两个参数，第一个为当前执行回调函数的元素的值，第二个是它的索引。  
+        可选参数thisValue:使mapFunction函数中的this指向此值。  
 04  二、改变原始数组
 3   (1) arr.**shift**()  
         删除数组的第一个元素。  
