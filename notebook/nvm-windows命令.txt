@@ -1,0 +1,47 @@
+@@ nvm-windows命令
+
+## 状态
+1. `nvm v`/`nvm version`  
+   查看当前运行的nvm的版本  
+2. `nvm arch`  
+   查看当前nvm的运行环境是32位还是64位  
+3. `nvm on`  
+   启用nvm版本管理  
+4. `nvm off`  
+   禁用nvm版本管理  
+
+## 配置
+1. `nvm proxy`  
+   查看当前的代理设置  
+   `nvm proxy <url>`  
+   设置代理  
+2. `nvm node_mirror`  
+   设置node镜像为默认地址(https://nodejs.org/dist/)  
+   `nvm node_mirror <url>`  
+   设置node镜像   
+3. `nvm npm_mirror`  
+   设置npm镜像为默认地址(https://github.com/npm/cli/archive/)  
+   `nvm npm_mirror <url>`  
+   设置npm镜像  
+4. `nvm root`  
+   查看nvm用于存储不同版本node.js的文件夹  
+   `nvm root <path>`  
+   设置nvm用于存储不同版本node.js的文件夹  
+
+## 管理
+1. `nvm list`/`nvm ls`  
+   查看当前已安装的node.js版本列表  
+   `nvm list available`/`nvm ls available`  
+   查看可从云端下载的node.js版本列表  
+2. `nvm install <version> [arch]`  
+   安装指定版本的node.js  
+   (1) `<version>`  
+       必选参数，可设置的值为一个版本号，或是`latest`以下载最新的稳定版  
+   (2) `[arch]`  
+       可选参数，可设置的值为: `32`,`64`或`all`以同时下载32和64位版本，两个版本会存放在同一个目录下
+3. `nvm uninstall <version>`  
+   卸载指定版本的node.js，`version`只能是一个具体的版本号；不可指定32位或64位，只能把它们同时卸载。  
+4. `nvm use <version> [arch]`  
+   切换到指定版本号和位数的node.js  
+   `nvm use [arch]`  
+   继续使用当前版本的node.js，只切换它的位数。  
